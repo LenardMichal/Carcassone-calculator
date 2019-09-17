@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`test of Meeple component should have valid snapshot 1`] = `
-<div>
-  Adolf K.
-</div>
-`;
