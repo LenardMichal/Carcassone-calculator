@@ -1,7 +1,7 @@
 import React from 'react';
 import Classes from './Meeple.module.css';
 
-const Meeple = ({active, onClickHandler, score = 0}) => {
+const Meeple = ({active, onClickHandler, score = 0, testID}) => {
 
   // const [active, setActive] = useState(false)
   
@@ -11,6 +11,7 @@ const Meeple = ({active, onClickHandler, score = 0}) => {
   <div
    className = {stylingClasses}
    onClick = {onClickHandler}
+   data-testid={testID}
    >
     {score}
   </div>

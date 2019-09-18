@@ -34,6 +34,7 @@ const MeepleContainer = () => {
      onClickHandler={toggleActive.bind(this, index)}
      key={index} 
      active={meeple.active}
+     testID={"player" + index}
      />
   });
 
@@ -43,10 +44,11 @@ const MeepleContainer = () => {
     addValueButtons.push(<PtsButton 
       value={i+1} 
       clickHandler={() => {
-        let temp = addPoints(meeples, i+1);
+        let temp = addPoints(meeples, i+1, substract);
         setMeeples(temp);
       }} 
-      key={i}/>)
+      key={i}
+      testID={"addPointsBtn" + (i + 1)}/>)
   }
   return (
     <div>

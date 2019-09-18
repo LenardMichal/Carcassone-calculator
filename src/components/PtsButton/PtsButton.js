@@ -1,7 +1,9 @@
 import React from 'react';
 
-const PtsButton = ({value, clickHandler}) => {
-  return <button onClick={clickHandler}>
+const PtsButton = ({value, clickHandler, testID}) => {
+  return <button 
+  data-testid={testID}
+  onClick={clickHandler}>
     {value}
   </button>
 }
