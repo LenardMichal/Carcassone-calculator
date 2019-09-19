@@ -8,8 +8,12 @@ describe('test of SubstractButton component', () => {
   });
 
   it('Get active classes when active props is true', () => {
-    const {rerender, getByText} = render(<SubstractButton active="false" />);
+    const {rerender, getByText} = render(<SubstractButton active={false} />);
 
-    expect(getByText)
+    expect(getByText('-').className).not.toMatch(/active/);
+
+    rerender(<SubstractButton active={true} />)
+
+    expect(getByText('-').className).toMatch(/active/);
   })
 })

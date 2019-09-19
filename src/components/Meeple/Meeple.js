@@ -1,11 +1,11 @@
 import React from 'react';
-import Classes from './Meeple.module.css';
+import styles from './Meeple.module.css';
 
 const Meeple = ({active, onClickHandler, score = 0, testID}) => {
 
   // const [active, setActive] = useState(false)
   
-  let stylingClasses = [Classes.main, active ? Classes.active : ''];
+  let stylingClasses = [styles.main, active ? styles.active : ''];
 
   return (
   <div

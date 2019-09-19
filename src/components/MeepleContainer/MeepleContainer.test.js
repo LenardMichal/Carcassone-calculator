@@ -56,4 +56,54 @@ describe('test of Meeple Container', () => {
 
 
   })
+
+  it('Clicking on substract button makes add points button to substract', () => {
+    const {queryByText, getByTestId} = render(<MeepleContainer />);
+
+    //First check that on click on button adds class to show its toggled in
+    fireEvent.click(queryByText('-'));
+    expect(queryByText('-').className).toMatch(/active/);
+
+    //activate any of players scorefield
+    fireEvent.click(getByTestId('player1'));
+
+    fireEvent.click(getByTestId('addPointsBtn1'));
+    
+    expect(getByTestId('player1').textContent).toEqual('-1');
+
+  });
+
+  it('clicking double click on clear button should reset scores and actives', () => {
+    const {getByText, getByTestId} = render(<MeepleContainer />);
+
+    fireEvent.click(getByTestId('player0'));
+    fireEvent.click(getByTestId('addPointsBtn1'));
+    
+    expect(getByTestId('player0').textContent).toEqual('1');
+    
+    fireEvent.dblClick(getByText('Clear'));
+
+    expect(getByTestId('player0').textContent).toEqual('0');
+    expect(getByTestId('player0').className).not.toMatch(/active/);
+    
+  });
+
+  describe('Test of multiplication button', () => {
+    
+    // Expose object for testing
+    let mockContainer = {};
+    beforeAll( () => {
+      mockContainer = render(<MeepleContainer />);
+    });
+
+    afterAll( () => {
+
+    });
+    
+    it('On start "x1" button should be only active', () => {
+      const {getByText, getByLabelText} = mockContainer;
+
+      // expect(getByLabelText('x1'))
+    });
+  })
 })
