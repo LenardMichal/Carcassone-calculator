@@ -1,0 +1,11 @@
+.main{
+  grid-column: 4/6;
+  background-color: rgb(120, 11, 5);
+  border: none;
+  color: white;
+  font-size: 1.6rem;
+}
+
+.main:hover {
+  background-color: rgb(184, 11, 5);
+}

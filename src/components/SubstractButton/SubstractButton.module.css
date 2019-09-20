@@ -1,0 +1,14 @@
+.main {
+  border: none;
+  color: white;
+  font-size: 2rem;
+  height: 8vh;
+  overflow: hidden;
+  background-color: blue;
+  grid-column: 1/ 4;
+  
+}
+
+.active{
+ background-color: aqua; 
+}

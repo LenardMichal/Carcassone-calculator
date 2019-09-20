@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import styles from './MeepleContainer.module.css';
 import Meeple from '../Meeple/Meeple';
 import PtsButton from '../PtsButton/PtsButton';
 import SubstractButton from '../SubstractButton/SubstractButton';
@@ -67,11 +68,19 @@ const MeepleContainer = () => {
 
   return (
     <div>
+      <section
+      className={styles.players}
+      >
       {meeplesView}
-      {addValueButtons}
+      </section>
+      <section
+      className={styles.controls}>
+        {addValueButtons}
       <SubstractButton active={substract} onClickHandler={() => {toggleSubstract(!substract)}}/>
-      <ClearButton onDblClickHandler={clearPlayers}/>
+      <ClearButton onDblClickHandler={clearPlayers} />
+       
       <MultiPanel onClickHandler={setMultiplication} />
+      </section>
     </div>
   )
 }

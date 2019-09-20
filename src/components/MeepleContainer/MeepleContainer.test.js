@@ -33,7 +33,7 @@ describe('test of Meeple Container', () => {
   })
 
   it('active player should get one point when he\'s active and 1 point button will be clicked', () => {
-    const {queryAllByText, queryByText, getByTestId} = render(<MeepleContainer />);
+    const { getByTestId } = render(<MeepleContainer />);
 
     const player0Field = getByTestId('player0');
     const addOnePointBtn = getByTestId('addPointsBtn1');
@@ -88,22 +88,22 @@ describe('test of Meeple Container', () => {
     
   });
 
-  describe('Test of multiplication button', () => {
+  // describe('Test of multiplication button', () => {
     
-    // Expose object for testing
-    let mockContainer = {};
-    beforeAll( () => {
-      mockContainer = render(<MeepleContainer />);
-    });
+  //   // Expose object for testing
+  //   let mockContainer = {};
+  //   beforeAll( () => {
+  //     mockContainer = render(<MeepleContainer />);
+  //   });
 
-    afterAll( () => {
+  //   afterAll( () => {
 
-    });
+  //   });
     
-    it('On start "x1" button should be only active', () => {
-      const {getByText, getByLabelText} = mockContainer;
+  //     // it('On start "x1" button should be only active', () => {
+  //     //   const {getByText, getByLabelText} = mockContainer;
 
-      // expect(getByLabelText('x1'))
-    });
-  })
+  //     //   // expect(getByLabelText('x1'))
+  //     // });
+  // })
 })

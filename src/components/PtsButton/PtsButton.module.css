@@ -1,0 +1,7 @@
+.main{
+  border: none;
+  height: 10vh;
+  background-color: var(--main-color);
+  color: white;
+  cursor: pointer;
+}

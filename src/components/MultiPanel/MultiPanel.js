@@ -1,4 +1,5 @@
-import React, { Fragment} from 'react';
+import React from 'react';
+import styles from './MultiPanel.module.css';
 
 const MultiPanel = ({counts = 5, onClickHandler}) => {
   let view = [];
@@ -8,26 +9,31 @@ const MultiPanel = ({counts = 5, onClickHandler}) => {
   for (let i = 1 ; i <= counts ; i++ ) {
     let indexKey = 'x' + i;
     let newElement = (
-      <Fragment key={i}>
-        <label 
-          htmlFor={indexKey}
-          key={"label" + i}
-          >{indexKey}
+      
+      <div 
+        key={i}
+      >
+        <label
+          className={styles.label} 
+          htmlFor={indexKey} 
+        >
+        {indexKey}
         </label>
-        <input 
+        <input
+          className={styles.radio} 
           name='multiplication'
           type='radio' 
           id={indexKey} 
           onClick={() => {onClickHandler(i)}}
-          key={"radio" + i}
           defaultChecked={1 === i ? true : false}
-          />
-      </Fragment>
+        />
+      </div>
     )
     view.push(newElement);
   }
   
-  return <div>
+  return <div
+  className={styles.container}>
     {view}
   </div>
 }

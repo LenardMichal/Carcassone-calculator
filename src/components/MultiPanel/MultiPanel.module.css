@@ -1,0 +1,20 @@
+.container{
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.radio{
+ display: none; 
+}
+
+.radio:checked::after{
+  color: rgb(122, 234, 253);
+}
+
+
+
+.label{
+  cursor: pointer;
+
+}

@@ -1,3 +1,7 @@
+:root {
+  --main-color: rgb(56, 135, 255);
+}
+
 .App {
   text-align: center;
 }
@@ -12,6 +16,16 @@
   
  
 } */
+
+.header{
+  background-color: rgb(51, 111, 202);
+  color: white;
+  padding-bottom: 3vh; 
+}
+
+.header h1{
+  margin: 0;
+}
 
 
 

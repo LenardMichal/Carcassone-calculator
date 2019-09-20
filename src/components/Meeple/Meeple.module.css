@@ -3,6 +3,8 @@
 }
 
 .main{
-  background-color: yellow;
-  height: 100vh;
+  width: auto;
+  display: inline-block;
+  height: 10vh;
+  
 }

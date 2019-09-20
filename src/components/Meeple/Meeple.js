@@ -1,18 +1,19 @@
 import React from 'react';
-import styles from './Meeple.module.css';
+import Classes from './Meeple.module.css';
 
-const Meeple = ({active, onClickHandler, score = 0, testID}) => {
+const Meeple = ({active, onClickHandler, score = 0, testID, color}) => {
 
-  // const [active, setActive] = useState(false)
   
-  let stylingClasses = [styles.main, active ? styles.active : ''];
-
+  // Join because passing just array don't work.
+  let stylingClasses = [Classes.main, active ? Classes.active : ''].join(' ');
+  
+  
   return (
   <div
-   className = {stylingClasses}
-   onClick = {onClickHandler}
-   data-testid={testID}
-   >
+    className = {stylingClasses}
+    onClick = {onClickHandler}
+    data-testid={testID}
+    >
     {score}
   </div>
   )
