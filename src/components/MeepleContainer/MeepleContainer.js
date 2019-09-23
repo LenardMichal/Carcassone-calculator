@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
+import React, {useState, Fragment} from 'react';
 import styles from './MeepleContainer.module.css';
 import Meeple from '../Meeple/Meeple';
 import PtsButton from '../PtsButton/PtsButton';
-import SubstractButton from '../SubstractButton/SubstractButton';
+import SubtractButton from '../Subtract/SubtractButton';
 import ClearButton from '../ClearButton/ClearButton';
 import MultiPanel from '../MultiPanel/MultiPanel';
 // startup settings
@@ -49,6 +49,7 @@ const MeepleContainer = () => {
      key={index} 
      active={meeple.active}
      testID={"player" + index}
+     color={meeple.color}
      />
   });
 
@@ -63,11 +64,13 @@ const MeepleContainer = () => {
         setMeeples(temp);
       }} 
       key={i}
+      isNegative={substract}
+      multiplication={multiplication}
       testID={"addPointsBtn" + (i + 1)}/>)
   }
 
   return (
-    <div>
+    <Fragment>
       <section
       className={styles.players}
       >
@@ -76,12 +79,12 @@ const MeepleContainer = () => {
       <section
       className={styles.controls}>
         {addValueButtons}
-      <SubstractButton active={substract} onClickHandler={() => {toggleSubstract(!substract)}}/>
+      <SubtractButton active={substract} onClickHandler={() => {toggleSubstract(!substract)}}/>
       <ClearButton onDblClickHandler={clearPlayers} />
        
-      <MultiPanel onClickHandler={setMultiplication} />
+      <MultiPanel onClickHandler={setMultiplication} currentActive={multiplication}/>
       </section>
-    </div>
+    </Fragment>
   )
 }
 

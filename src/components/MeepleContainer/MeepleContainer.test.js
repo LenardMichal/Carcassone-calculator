@@ -57,12 +57,12 @@ describe('test of Meeple Container', () => {
 
   })
 
-  it('Clicking on substract button makes add points button to substract', () => {
+  it('Clicking on substract button makes add points button to subtract', () => {
     const {queryByText, getByTestId} = render(<MeepleContainer />);
 
     //First check that on click on button adds class to show its toggled in
-    fireEvent.click(queryByText('-'));
-    expect(queryByText('-').className).toMatch(/active/);
+    fireEvent.click(queryByText('Subtract'));
+    expect(queryByText('Subtract').className).toMatch(/active/);
 
     //activate any of players scorefield
     fireEvent.click(getByTestId('player1'));

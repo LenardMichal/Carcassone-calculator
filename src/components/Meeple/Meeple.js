@@ -13,6 +13,7 @@ const Meeple = ({active, onClickHandler, score = 0, testID, color}) => {
     className = {stylingClasses}
     onClick = {onClickHandler}
     data-testid={testID}
+    style={{backgroundColor: color}}
     >
     {score}
   </div>

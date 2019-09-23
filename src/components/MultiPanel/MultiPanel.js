@@ -1,21 +1,24 @@
 import React from 'react';
 import styles from './MultiPanel.module.css';
 
-const MultiPanel = ({counts = 5, onClickHandler}) => {
+const MultiPanel = ({counts = 5, onClickHandler, currentActive}) => {
   let view = [];
 
   
   //Creates 
   for (let i = 1 ; i <= counts ; i++ ) {
     let indexKey = 'x' + i;
+
+    // Check for styles
+    var labelStyles = [styles.label, currentActive === i ? styles.active : null].join(' ')
+   
     let newElement = (
-      
       <div 
         key={i}
       >
         <label
-          className={styles.label} 
-          htmlFor={indexKey} 
+          className={labelStyles} 
+          htmlFor={indexKey}
         >
         {indexKey}
         </label>
@@ -29,8 +32,10 @@ const MultiPanel = ({counts = 5, onClickHandler}) => {
         />
       </div>
     )
+
     view.push(newElement);
   }
+
   
   return <div
   className={styles.container}>

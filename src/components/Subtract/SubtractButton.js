@@ -1,5 +1,5 @@
 import React from 'react';
-import Classes from './SubstractButton.module.css';
+import Classes from './SubtractButton.module.css';
 
 const SubstractButton = ({onClickHandler, active}) => {
   
@@ -10,7 +10,7 @@ const SubstractButton = ({onClickHandler, active}) => {
   onClick={onClickHandler}
   className={activeClasses}
   >
-    Substracte
+    Subtract
   </button>
 }
 

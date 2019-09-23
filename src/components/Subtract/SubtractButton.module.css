@@ -2,11 +2,14 @@
   border: none;
   color: white;
   font-size: 2rem;
-  height: 8vh;
   overflow: hidden;
-  background-color: blue;
+  background-color: #0000ff;
   grid-column: 1/ 4;
-  
+  cursor: pointer;
+}
+
+.main:hover {
+  background-color: #2020ff
 }
 
 .active{

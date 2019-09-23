@@ -4,6 +4,7 @@
 
 .App {
   text-align: center;
+  height: 100vh;
 }
 
 /* #scrim {
@@ -20,7 +21,8 @@
 .header{
   background-color: rgb(51, 111, 202);
   color: white;
-  padding-bottom: 3vh; 
+  padding: 2vh;
+  max-height: 10vh;
 }
 
 .header h1{

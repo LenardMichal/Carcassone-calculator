@@ -11,7 +11,14 @@ function App() {
         </h1>
       </header>
       <MeepleContainer />
-      <div id="scrim"></div>
+      <footer>
+        <a 
+        alt='github repo link' 
+        href='https://github.com/LenardMichal/Carcassone-calculator'
+        nofollow>
+          Link to github
+        </a>
+      </footer>
     </div>
   );
 }

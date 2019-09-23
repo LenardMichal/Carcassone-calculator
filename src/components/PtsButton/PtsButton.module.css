@@ -1,7 +1,12 @@
 .main{
   border: none;
-  height: 10vh;
   background-color: var(--main-color);
   color: white;
   cursor: pointer;
+  max-height: 80px;
+  max-width: 80px;
+}
+
+.main:hover{
+  background-color: rgb(131, 177, 245)
 }
